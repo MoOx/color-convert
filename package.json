@@ -8,13 +8,20 @@
   ],
   "license": "MIT",
   "repository": "Qix-/color-convert",
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": "^12.17.0 || ^14.13 || >=16.0.0"
+  },
   "scripts": {
     "pretest": "xo",
     "test": "node test/basic.js"
   },
-  "engines": {
-    "node": ">=7.0.0"
-  },
+  "files": [
+    "index.js",
+    "conversions.js",
+    "route.js"
+  ],
   "keywords": [
     "color",
     "colour",
@@ -29,11 +36,6 @@
     "ansi",
     "ansi16"
   ],
-  "files": [
-    "index.js",
-    "conversions.js",
-    "route.js"
-  ],
   "xo": {
     "rules": {
       "default-case": 0,
@@ -43,9 +45,9 @@
     }
   },
   "devDependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^5.0.1",
     "jimp": "^0.16.1",
-    "xo": "^0.24.0"
+    "xo": "^0.52.3"
   },
   "dependencies": {
     "color-name": "~1.1.4"

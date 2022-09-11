@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
-const jimp = require('jimp');
-const cc = require('..');
+import process from 'node:process';
+import jimp from 'jimp';
+import cc from '../index.js';
 
 async function main() {
 	if (process.argv.length !== 4) {
@@ -27,7 +27,7 @@ async function main() {
 			img.bitmap.data[idx] = r;
 			img.bitmap.data[idx + 1] = g;
 			img.bitmap.data[idx + 2] = b;
-		}
+		},
 	);
 
 	await img.write(outputPath);
