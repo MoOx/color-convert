@@ -346,18 +346,29 @@ convert.hsv.rgb = function (hsv) {
 	v *= 255;
 
 	switch (hi) {
-		case 0:
+		case 0: {
 			return [v, t, p];
-		case 1:
+		}
+
+		case 1: {
 			return [q, v, p];
-		case 2:
+		}
+
+		case 2: {
 			return [p, v, t];
-		case 3:
+		}
+
+		case 3: {
 			return [p, q, v];
-		case 4:
+		}
+
+		case 4: {
 			return [t, p, v];
-		case 5:
+		}
+
+		case 5: {
 			return [v, p, q];
+		}
 	}
 };
 
@@ -411,12 +422,23 @@ convert.hwb.rgb = function (hwb) {
 	switch (i) {
 		default:
 		case 6:
-		case 0: r = v;  g = n;  b = wh; break;
-		case 1: r = n;  g = v;  b = wh; break;
-		case 2: r = wh; g = v;  b = n; break;
-		case 3: r = wh; g = n;  b = v; break;
-		case 4: r = n;  g = wh; b = v; break;
-		case 5: r = v;  g = wh; b = n; break;
+		case 0: { r = v;  g = n;  b = wh; break;
+		}
+
+		case 1: { r = n;  g = v;  b = wh; break;
+		}
+
+		case 2: { r = wh; g = v;  b = n; break;
+		}
+
+		case 3: { r = wh; g = n;  b = v; break;
+		}
+
+		case 4: { r = n;  g = wh; b = v; break;
+		}
+
+		case 5: { r = v;  g = wh; b = n; break;
+		}
 	}
 	/* eslint-enable max-statements-per-line,no-multi-spaces, default-case-last */
 
@@ -756,18 +778,29 @@ convert.hcg.rgb = function (hcg) {
 
 	/* eslint-disable max-statements-per-line */
 	switch (Math.floor(hi)) {
-		case 0:
+		case 0: {
 			pure[0] = 1; pure[1] = v; pure[2] = 0; break;
-		case 1:
+		}
+
+		case 1: {
 			pure[0] = w; pure[1] = 1; pure[2] = 0; break;
-		case 2:
+		}
+
+		case 2: {
 			pure[0] = 0; pure[1] = 1; pure[2] = v; break;
-		case 3:
+		}
+
+		case 3: {
 			pure[0] = 0; pure[1] = w; pure[2] = 1; break;
-		case 4:
+		}
+
+		case 4: {
 			pure[0] = v; pure[1] = 0; pure[2] = 1; break;
-		default:
+		}
+
+		default: {
 			pure[0] = 1; pure[1] = 0; pure[2] = w;
+		}
 	}
 	/* eslint-enable max-statements-per-line */
 

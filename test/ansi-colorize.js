@@ -33,7 +33,7 @@ async function main() {
 	await img.write(outputPath);
 }
 
-main().catch(error => {
+await main().catch(error => {
 	console.error(error);
 	process.exit(1);
 });

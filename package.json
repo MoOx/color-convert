@@ -11,7 +11,7 @@
   "type": "module",
   "exports": "./index.js",
   "engines": {
-    "node": "^12.17.0 || ^14.13 || >=16.0.0"
+    "node": ">=14.6"
   },
   "scripts": {
     "pretest": "xo",
@@ -45,11 +45,11 @@
     }
   },
   "devDependencies": {
-    "chalk": "^5.0.1",
-    "jimp": "^0.16.1",
-    "xo": "^0.52.3"
+    "chalk": "^5.2.0",
+    "jimp": "^0.22.8",
+    "xo": "^0.54.2"
   },
   "dependencies": {
-    "color-name": "~1.1.4"
+    "color-name": "^2.0.0"
   }
 }
