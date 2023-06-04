@@ -16,8 +16,8 @@ var ansiChannels = convert.ansi16.channels; // 1
 
 # Install
 
-```console
-$ npm install color-convert
+```sh
+npm install color-convert
 ```
 
 # API
