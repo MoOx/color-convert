@@ -10,15 +10,16 @@
   "repository": "Qix-/color-convert",
   "type": "module",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "engines": {
     "node": ">=14.6"
   },
   "scripts": {
-    "pretest": "xo",
-    "test": "node test/basic.js"
+    "test": "xo && tsd && node test/basic.js"
   },
   "files": [
     "index.js",
+    "index.d.ts",
     "conversions.js",
     "route.js"
   ],
@@ -41,12 +42,14 @@
       "default-case": 0,
       "no-inline-comments": 0,
       "operator-linebreak": 0,
-      "unicorn/prefer-exponentiation-operator": 0
+      "unicorn/prefer-exponentiation-operator": 0,
+      "@typescript-eslint/naming-convention": 0
     }
   },
   "devDependencies": {
     "chalk": "^5.2.0",
     "jimp": "^0.22.8",
+    "tsd": "^0.28.1",
     "xo": "^0.54.2"
   },
   "dependencies": {
